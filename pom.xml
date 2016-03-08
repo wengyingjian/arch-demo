@@ -16,7 +16,7 @@
 
         <junit.version>4.12</junit.version>
         <jackson.version>2.7.2</jackson.version>
-
+        <hessian.version>4.0.38</hessian.version>
     </properties>
 
     <dependencies>
@@ -26,10 +26,18 @@
             <version>${junit.version}</version>
         </dependency>
 
+        <!--for jsonutil-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
+        </dependency>
+
+        <!--for hessian seria @see com.wengyingjian.demo.soa.serial.HessianSerial-->
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>${hessian.version}</version>
         </dependency>
 
     </dependencies>

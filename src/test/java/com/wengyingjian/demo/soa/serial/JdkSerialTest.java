@@ -22,19 +22,23 @@ public class JdkSerialTest {
     @Test
     public void test() {
 
+        testJdk();
+
+    }
+
+    private void testJdk() {
         //原始
         TestBean testBean = new TestBean();
         testBean.setName("andy");
         testBean.setType(123);
-        System.out.println("before:" + JsonUtil.getJsonFromObject(testBean));
+//        System.out.println("before:" + JsonUtil.getJsonFromObject(testBean));
 
         //序列化
         byte[] tBytes = serial.serial(testBean);
-        System.out.println("tBytes:" + Arrays.toString(tBytes));
+//        System.out.println("tBytes:" + Arrays.toString(tBytes));
 
         //反序列化
         TestBean result = serial.unSerial(tBytes, TestBean.class);
-        System.out.println("after:" + JsonUtil.getJsonFromObject(result));
-
+//        System.out.println("after:" + JsonUtil.getJsonFromObject(result));
     }
 }
