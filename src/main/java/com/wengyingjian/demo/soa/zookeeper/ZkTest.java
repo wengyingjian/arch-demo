@@ -8,6 +8,16 @@ import java.util.ArrayList;
 
 /**
  * Created by wengyingjian on 16/3/9.
+ *
+ * @see org.apache.zookeeper.KeeperException.ConnectionLossException 客户端与其中的一台服务器socket连接出现异常,连接消失
+ * <p>
+ * 该异常可以通过重试进行处理,
+ * 客户端会根据初始化Zookeeper时传递的服务列表,自动尝试下一个服务端节点,
+ * 而在这段时间内,服务端节点变更的事件就会丢失
+ * @see org.apache.zookeeper.KeeperException.SessionExpiredException 客户端的session已经超过sessionTimeout,未进行任何操作
+ * <p>
+ * 该异常不能通过重试进行解决,需要应用重新创建一个新的客户端(new Zookeeper),
+ * 这是所有的wather和EPHEMERAL节点都将失效
  */
 public class ZkTest {
 
