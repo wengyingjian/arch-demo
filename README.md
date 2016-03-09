@@ -1,7 +1,7 @@
 ## 各种demo
 
 ### com.wengyingjian.demo.soa.serial
-**com.wengyingjian.demo.soa.serial.HessianSerial**   
+**com.wengyingjian.demo.soa.serial.JdkSerial**   
  Jdk自带的序列化(Serializable)  
 **com.wengyingjian.demo.soa.serial.HessianSerial**  
   hessian序列化
