@@ -1,7 +1,7 @@
 package com.wengyingjian.demo.soa.rpc;
 
-import com.wengyingjian.demo.soa.rpc.tcp.TcpClient;
-import com.wengyingjian.demo.soa.rpc.tcp.TcpServer;
+import com.wengyingjian.demo.soa.rpc.tcp.v1.TcpClient;
+import com.wengyingjian.demo.soa.rpc.tcp.v1.TcpServer;
 import org.junit.Before;
 import org.junit.Test;
 

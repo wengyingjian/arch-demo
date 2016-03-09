@@ -1,4 +1,4 @@
-package com.wengyingjian.demo.soa.rpc.tcp;
+package com.wengyingjian.demo.soa.rpc.tcp.v2;
 
 import com.wengyingjian.demo.soa.rpc.tcp.service.HelloService;
 
@@ -14,34 +14,28 @@ import java.net.UnknownHostException;
  * 基于tcp的远程调用:客户端
  * Created by wengyingjian on 16/3/9.
  */
-public class TcpClient {
+public class TcpClient2 {
 
-    public Object call() {
-        Class clazz = HelloService.class;
+    private static final int port = 10001;
+    private static final String host = "127.0.0.1";
+
+    public Object call2(Class interfacs, Method method, Object[] args) {
         try {
-            Method method = clazz.getMethod("say", String.class);
-            Object[] args = {"hello"};
-
-            Socket socket = new Socket(InetAddress.getLocalHost(), 10001);
+            Socket socket = new Socket(InetAddress.getByName(host), 10001);
 
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-            oos.writeUTF(clazz.getName());
+            oos.writeUTF(interfacs.getName());
             oos.writeUTF(method.getName());
             oos.writeObject(method.getParameterTypes());
             oos.writeObject(args);
 
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
-            Object result = ois.readObject();
-            return method.getReturnType().cast(result);
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
+            return ois.readObject();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        throw new RuntimeException();
+        throw new RuntimeException("远程调用失败");
     }
 }
