@@ -1,17 +1,15 @@
 package com.wengyingjian.demo.soa.rpc.tcp.v1;
 
-import com.wengyingjian.demo.soa.rpc.tcp.service.HelloService;
-import com.wengyingjian.demo.soa.rpc.tcp.service.impl.HelloServiceImpl;
+import com.wengyingjian.demo.soa.rpc.service.HelloService;
+import com.wengyingjian.demo.soa.rpc.service.impl.HelloServiceImpl;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.lang.reflect.Array;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Arrays;
 
 /**
  * 基于tcp的远程调用:服务端

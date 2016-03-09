@@ -1,6 +1,6 @@
-package com.wengyingjian.demo.soa.rpc.tcp.service.impl;
+package com.wengyingjian.demo.soa.rpc.service.impl;
 
-import com.wengyingjian.demo.soa.rpc.tcp.service.HelloService2;
+import com.wengyingjian.demo.soa.rpc.service.HelloService2;
 
 /**
  * Created by wengyingjian on 16/3/9.

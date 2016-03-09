@@ -1,4 +1,4 @@
-package com.wengyingjian.demo.soa.rpc;
+package com.wengyingjian.demo.soa.rpc.tcp;
 
 import com.wengyingjian.demo.soa.rpc.tcp.v1.TcpClient;
 import com.wengyingjian.demo.soa.rpc.tcp.v1.TcpServer;

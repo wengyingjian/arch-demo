@@ -1,6 +1,6 @@
 package com.wengyingjian.demo.soa.rpc.tcp.v1;
 
-import com.wengyingjian.demo.soa.rpc.tcp.service.HelloService;
+import com.wengyingjian.demo.soa.rpc.service.HelloService;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

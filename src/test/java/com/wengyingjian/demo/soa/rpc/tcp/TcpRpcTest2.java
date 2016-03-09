@@ -1,7 +1,7 @@
-package com.wengyingjian.demo.soa.rpc;
+package com.wengyingjian.demo.soa.rpc.tcp;
 
-import com.wengyingjian.demo.soa.rpc.tcp.service.HelloService;
-import com.wengyingjian.demo.soa.rpc.tcp.service.HelloService2;
+import com.wengyingjian.demo.soa.rpc.service.HelloService;
+import com.wengyingjian.demo.soa.rpc.service.HelloService2;
 import com.wengyingjian.demo.soa.rpc.tcp.v2.TcpClient2;
 import com.wengyingjian.demo.soa.rpc.tcp.v2.TcpServer2;
 import org.junit.Before;

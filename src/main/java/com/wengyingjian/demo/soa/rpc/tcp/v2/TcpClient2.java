@@ -1,6 +1,6 @@
 package com.wengyingjian.demo.soa.rpc.tcp.v2;
 
-import com.wengyingjian.demo.soa.rpc.tcp.service.HelloService;
+import com.wengyingjian.demo.soa.rpc.service.HelloService;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -8,7 +8,6 @@ import java.io.ObjectOutputStream;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 /**
  * 基于tcp的远程调用:客户端

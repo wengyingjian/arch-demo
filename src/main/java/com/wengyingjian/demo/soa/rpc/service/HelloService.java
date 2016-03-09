@@ -1,4 +1,4 @@
-package com.wengyingjian.demo.soa.rpc.tcp.service;
+package com.wengyingjian.demo.soa.rpc.service;
 
 /**
  * Created by wengyingjian on 16/3/9.
