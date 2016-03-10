@@ -19,7 +19,7 @@ import java.util.ArrayList;
  * 该异常不能通过重试进行解决,需要应用重新创建一个新的客户端(new Zookeeper),
  * 这是所有的wather和EPHEMERAL节点都将失效
  */
-public class ZkTest {
+public class ZookeeperTest {
 
     private static final String HOST = "120.27.97.242";
     private static final int sessionTimeout = 6000;
